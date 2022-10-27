@@ -1,0 +1,42 @@
+<header>
+    <h1>FORMULÁRIO DE CADASTRO</h1>
+    <h2>ACADEMIA GSA</h2>
+    <a href="/"><button>Página Inicial</button></a>
+    <p></p>
+</header>
+<section>
+    <div class="divc">
+        <form action="/submitcad" method="post">
+            <h3>Informe os dados abaixo:</h3>
+            <p>Nome: <input style="width: 400px;" type="text" name="nome" id="nome" required></p>
+            <p>Sexo: <select name="sexo" id="sexo" required>
+                <option value=""></option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select></p>
+            <p>Data de Nascimento: <input type="date" name="nasc" id="nasc" required></p>
+            <p>E-mail: <input style="width: 260px;" type="email" name="email" id="email"></p>
+            <p>Telefone/Whatsapp: <input type="tel" name="phone" id="phone"
+            pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}">
+            <small>format: 00-00000-0000</small></p>
+            <p>Altura: <input style="margin-left: 0pt;" type="number" name="altura" id="alt" required> cm</p>
+            <p>Peso:   <input style="margin-left: 4pt;" type="number" name="peso" id="peso" required> kg</p>
+            <p>Selecione os objetivos de treino:</p>
+            <p style="font: normal 10pt Arial;"><input type="checkbox" name="hipertrofia" id="thip"> Hipertrofia</p>
+            <p style="font: normal 10pt Arial;"><input type="checkbox" name="resistencia" id="tres"> Resistência</p>
+            <p style="font: normal 10pt Arial;"><input type="checkbox" name="definicao" id="tdef"> Definição</p>
+            <p style="font: normal 10pt Arial;"><input type="checkbox" name="emagrecimento" id="temg"> Emagrecimento</p>
+            <p>Observações:</p>
+            <textarea name="obs" id="obs" cols="65" rows="5"></textarea>
+            <hr>
+            <h3>Informações de login:</h3>
+            <p>Usuário: <input style="margin-left: 75pt;" type="text" name="user" id="user" required></p>
+            <p>Senha para acesso:
+                <input style="margin-left: 13pt;" type="password" name="pass" id="pass" required></p>
+            <p>Confirmar senha:
+                <input style="margin-left: 27pt;" type="password" name="passc" id="passc" required></p>
+            <hr>
+            <button type="submit">Cadastrar</button>              
+        </form>
+    </div>
+</section>

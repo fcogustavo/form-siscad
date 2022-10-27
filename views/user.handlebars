@@ -1,0 +1,43 @@
+<header>
+    <h1>PÁGINA DO USUÁRIO</h1>
+    <h2>ACADEMIA GSA</h2>
+    <h3>Bem-vindo, <strong>{{rUser.nome}}</strong>!</h3>
+    <a href="/"><button>Sair</button></a>
+    <p></p>
+</header>
+<section>
+    <div class="divc">
+        <p><strong>Nome:</strong> {{rUser.nome}}</p>
+        <p><strong>Sexo:</strong> {{rUser.sexo}}</p>
+        <p><strong>Data de Nascimento:</strong> {{rUser.datanascimento}}</p>
+        <p><strong>E-mail:</strong> {{rUser.email}}</p>
+        <p><strong>Telefone/Whatsapp:</strong> {{rUser.telefone}}</p>
+        <p><strong>Altura:</strong> {{rUser.altura}} cm</p>
+        <p><strong>Peso:</strong>   {{rUser.peso}} kg</p>
+        <p><strong>Objetivos de treino:</strong>
+            <p><strong>Hipertrofia:</strong> {{r_hipertrofia}}</p>
+            <p><strong>Resistência:</strong> {{r_resistencia}}</p>
+            <p><strong>Definição:</strong> {{r_definicao}}</p>
+            <p><strong>Emagrecimento:</strong> {{r_emagrecimento}}</p>
+        </p>
+        <p><strong>Observações:</strong> {{rUser.observacoes}}</p>
+        <hr>
+        <p><strong>Usuário:</strong> {{rUser.usuario}}</p>
+        <hr>
+    </div>
+    <div class="divc" style="text-align: center;">
+        <form action="/changecad" method="post">
+            <input type="text" name="username" value="{{rUser.usuario}}" hidden>
+            <button type="submit">Alterar Dados</button>
+        </form>
+        <hr>
+    </div>
+    <div class="divc" style="text-align: center;">
+        <form action="/confirmdelcad" method="post">
+            <input type="text" name="username" value="{{rUser.usuario}}" hidden>
+            <button type="submit">Excluir Cadastro</button>
+        </form>
+        <hr>
+        <a href="/"><button>Sair</button></a>
+    </div>
+</section>

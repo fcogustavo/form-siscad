@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SisCad</title>
+    <style>
+        body {
+            background-color: rgb(88, 85, 85);
+            font: normal 12pt Arial;
+        }
+        header {
+            width: 500px;
+            margin: auto;
+            text-align: center;
+            color: white;
+            
+        }
+        section {
+            background-color: white;
+            width: 500px;
+            padding: 15px;
+            border: 2px solid black;
+            border-radius: 10pt;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.356);
+        }
+        div.divc {
+            background-color: white;
+            align-content: center;
+        }
+        button#bt1 {
+            width: 200px;
+            height: 50px;
+            margin-bottom: 15pt;
+            border-radius: 5pt;
+        }
+        button#bt2 {
+            width: 200px;
+            height: 50px;
+            border-radius: 5pt;
+        }
+        p#msgdel {
+            color: brown;
+        }
+    </style>
+    
+</head>
+<body>
+    {{{body}}}
+    <script>
+        let insenha = document.getElementById('pass')
+        let insenhaC = document.getElementById('passc')
+        function validatePassword(){
+            if (insenha.value != insenhaC.value){
+                if (insenhaC.value == ''){
+                    insenhaC.setCustomValidity('Preencha este campo.')
+                } else {
+                    insenhaC.setCustomValidity('Senhas diferentes!')
+                } 
+            } else {
+                insenhaC.setCustomValidity('')
+            }
+        }
+        insenha.onchange = validatePassword
+        insenhaC.onkeyup = validatePassword
+        function back(){
+            window.history.back()
+        }
+    </script>
+</body>
+</html>

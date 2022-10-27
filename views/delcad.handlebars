@@ -1,0 +1,15 @@
+<header>
+    <h1>CONFIRMAÇÃO DE EXCLUSÃO</h1>
+    <h2>ACADEMIA GSA</h2>
+</header>
+<section>
+    <div class="divc" style="text-align: center;">
+        <h3>Confirma a exclusão do cadastro?</h3>
+        <p id="msgdel">Obs.: Todos os dados serão apagados.</p>
+        <form action="/delcad" method="post" id="formdel">
+            <input type="text" name="username" value="{{username}}" hidden>
+        </form>
+        <button type="submit" form="formdel">Sim</button>
+        <button onclick="back()">Não</button>
+    </div>
+</section>

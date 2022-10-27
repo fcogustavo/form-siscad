@@ -1,0 +1,47 @@
+<header>
+    <h1>PÁGINA DO USUÁRIO</h1>
+    <h2>ACADEMIA GSA</h2>
+    <h3>Alteração de Dados Cadastrais</h3>
+    <a href="/"><button>Sair</button></a>
+    <p></p>
+</header>
+<section>
+    <div class="divc">
+        <form action="/submitchangecad" method="post" id="changecad">
+            <h3>Informe os dados abaixo:</h3>
+            <p>Nome: <input style="width: 400px;" type="text" name="nome" id="nome" value="{{rUser.nome}}" required></p>
+            <p>Sexo: <select name="sexo" id="sexo">
+                <option value="masculino" {{r_masc}}>Masculino</option>
+                <option value="feminino" {{r_fem}}>Feminino</option>
+            </select></p>
+            <p>Data de Nascimento: <input type="date" name="nasc" id="nasc" value="{{rUser.datanascimento}}" required></p>
+            <p>E-mail: <input style="width: 260px;" type="email" name="email" id="email" value="{{rUser.email}}"></p>
+            <p>Telefone/Whatsapp: <input type="tel" name="phone" id="phone"
+            pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" value="{{rUser.telefone}}">
+            <small>format: 00-00000-0000</small></p>
+            <p>Altura: <input style="margin-left: 0pt;" type="number" name="altura" id="alt" value="{{rUser.altura}}" required> cm</p>
+            <p>Peso:   <input style="margin-left: 4pt;" type="number" name="peso" id="peso" value="{{rUser.peso}}" required> kg</p>
+            <p>Selecione os objetivos de treino:</p>
+            <p style="font: normal 10pt Arial;"><input type="checkbox" name="hipertrofia" id="thip" {{r_hipertrofia}}> Hipertrofia</p>
+            <p style="font: normal 10pt Arial;"><input type="checkbox" name="resistencia" id="tres" {{r_resistencia}}> Resistência</p>
+            <p style="font: normal 10pt Arial;"><input type="checkbox" name="definicao" id="tdef" {{r_definicao}}> Definição</p>
+            <p style="font: normal 10pt Arial;"><input type="checkbox" name="emagrecimento" id="temg" {{r_emagrecimento}}> Emagrecimento</p>
+            <p>Observações:</p>
+            <textarea name="obs" id="obs" cols="65" rows="5">{{rUser.observacoes}}</textarea>
+            <hr>
+            <h3>Informações de login:</h3>
+            <p>Usuário: <input style="margin-left: 75pt;" type="text" name="user" id="user" value="{{rUser.usuario}}" required></p>
+            <input style="margin-left: 75pt;" type="text" name="userold" value="{{rUser.usuario}}" hidden>
+            <p>Senha para acesso: <input style="margin-left: 13pt;" type="password" name="pass" id="pass" value="{{rUser.senha}}" required>
+            <small id="logs"></small></p>
+            <p id="cs">Confirmar senha: <input style="margin-left: 27pt;" type="password" name="passc" id="passc" value="{{rUser.senha}}" required></p>
+            <hr>            
+        </form>      
+    </div>
+    <div class="divc" style="text-align: center;">
+        <button type="submit" form="changecad">Salvar Alterações</button> 
+        <hr>
+        <button onclick="back()">Voltar</button>
+        <a href="/"><button>Sair</button></a>   
+    </div>
+</section>
